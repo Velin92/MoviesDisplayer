@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A7AD60652665964900DCBC58 /* MoviesSearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD60642665964900DCBC58 /* MoviesSearchBar.swift */; };
+		A7AD60672665986100DCBC58 /* MoviesSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7AD60662665986100DCBC58 /* MoviesSearchViewModel.swift */; };
 		A7DDA22326658B48009D8498 /* MoviesDisplayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDA22226658B48009D8498 /* MoviesDisplayerApp.swift */; };
-		A7DDA22526658B48009D8498 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDA22426658B48009D8498 /* ContentView.swift */; };
+		A7DDA22526658B48009D8498 /* MoviesSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDA22426658B48009D8498 /* MoviesSearchView.swift */; };
 		A7DDA22726658B49009D8498 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DDA22626658B49009D8498 /* Assets.xcassets */; };
 		A7DDA22A26658B49009D8498 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7DDA22926658B49009D8498 /* Preview Assets.xcassets */; };
 		A7DDA23526658B4A009D8498 /* MoviesDisplayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DDA23426658B4A009D8498 /* MoviesDisplayerTests.swift */; };
@@ -33,9 +35,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A7AD60642665964900DCBC58 /* MoviesSearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchBar.swift; sourceTree = "<group>"; };
+		A7AD60662665986100DCBC58 /* MoviesSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchViewModel.swift; sourceTree = "<group>"; };
 		A7DDA21F26658B48009D8498 /* MoviesDisplayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesDisplayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7DDA22226658B48009D8498 /* MoviesDisplayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesDisplayerApp.swift; sourceTree = "<group>"; };
-		A7DDA22426658B48009D8498 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A7DDA22426658B48009D8498 /* MoviesSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesSearchView.swift; sourceTree = "<group>"; };
 		A7DDA22626658B49009D8498 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A7DDA22926658B49009D8498 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A7DDA22B26658B49009D8498 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A7AD60632665963600DCBC58 /* MoviesSearch */ = {
+			isa = PBXGroup;
+			children = (
+				A7AD60642665964900DCBC58 /* MoviesSearchBar.swift */,
+				A7DDA22426658B48009D8498 /* MoviesSearchView.swift */,
+				A7AD60662665986100DCBC58 /* MoviesSearchViewModel.swift */,
+			);
+			path = MoviesSearch;
+			sourceTree = "<group>";
+		};
 		A7DDA21626658B48009D8498 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +109,8 @@
 		A7DDA22126658B48009D8498 /* MoviesDisplayer */ = {
 			isa = PBXGroup;
 			children = (
+				A7AD60632665963600DCBC58 /* MoviesSearch */,
 				A7DDA22226658B48009D8498 /* MoviesDisplayerApp.swift */,
-				A7DDA22426658B48009D8498 /* ContentView.swift */,
 				A7DDA22626658B49009D8498 /* Assets.xcassets */,
 				A7DDA22B26658B49009D8498 /* Info.plist */,
 				A7DDA22826658B49009D8498 /* Preview Content */,
@@ -259,8 +273,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7DDA22526658B48009D8498 /* ContentView.swift in Sources */,
+				A7AD60652665964900DCBC58 /* MoviesSearchBar.swift in Sources */,
+				A7DDA22526658B48009D8498 /* MoviesSearchView.swift in Sources */,
 				A7DDA22326658B48009D8498 /* MoviesDisplayerApp.swift in Sources */,
+				A7AD60672665986100DCBC58 /* MoviesSearchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
