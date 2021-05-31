@@ -8,6 +8,6 @@
 import Combine
 import Foundation
 
-class MoviesSearchViewModel: ObservableObject {
+final class MoviesSearchViewModel: ObservableObject {
     @Published var searchInput = ""
 }
