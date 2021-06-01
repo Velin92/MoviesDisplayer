@@ -7,20 +7,21 @@
 
 import Foundation
 
-struct ReusableViewViewModelAdapter: Hashable {
-    private let hashable: AnyHashable
-    let reusableViewViewModel: ReusableViewModel
+struct ReusableViewModelAdapter: Hashable, Identifiable {
+    
+    let id: AnyHashable
+    let reusableViewModel: ReusableViewModel
 
-    init<H: Hashable>(hashable: H, reusableViewViewModel: ReusableViewModel) {
-        self.hashable = AnyHashable(hashable)
-        self.reusableViewViewModel = reusableViewViewModel
+    init<H: Hashable>(hashable: H, reusableViewModel: ReusableViewModel) {
+        self.id = AnyHashable(hashable)
+        self.reusableViewModel = reusableViewModel
     }
     
     static func == (lhs: Self, rhs: Self) -> Bool {
-        lhs.hashable == rhs.hashable
+        lhs.id == rhs.id
     }
     
     func hash(into hasher: inout Hasher) {
-        hasher.combine(hashable)
+        hasher.combine(id)
     }
 }

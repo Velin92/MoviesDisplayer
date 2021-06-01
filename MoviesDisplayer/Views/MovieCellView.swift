@@ -7,14 +7,20 @@
 
 import SwiftUI
 
+import Kingfisher
+
 struct MovieCellView: View {
     
     @State var viewModel: MovieCellViewModel
     
     var body: some View {
         HStack {
-            Image(uiImage: UIImage(data: Data()) ?? UIImage())
-            VStack {
+            KFImage(viewModel.imageUrl)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 200, alignment: .leading)
+            Spacer()
+            VStack(alignment: .trailing) {
                 Text(viewModel.title)
                 Text(viewModel.voteString)
             }

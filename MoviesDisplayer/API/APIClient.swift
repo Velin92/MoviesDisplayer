@@ -9,6 +9,10 @@ import Foundation
 
 import Alamofire
 
+enum APIError: Error {
+    case missingResponse
+}
+
 protocol MoviesSearchAPIClient {
     func search(query: String, page: Int) -> AnyPublisher<SearchResponse, Error>
 }
@@ -17,8 +21,14 @@ class APIClient {
     
     private func request<T: Decodable> (_ urlConvertible: URLRequestConvertible) -> AnyPublisher<T, Error> {
         AF.request(urlConvertible).publishDecodable(type: T.self, decoder: JSONDecoder())
-            .tryCompactMap { response in
-                response.value
+            .tryMap { response in
+                if let error = response.error {
+                    throw error
+                } else if let value = response.value {
+                    return value
+                } else {
+                    throw APIError.missingResponse
+                }
             }
             .eraseToAnyPublisher()
     }

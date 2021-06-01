@@ -10,7 +10,7 @@ import Foundation
 protocol ReusableViewModel {}
 
 extension ReusableViewModel {
-    func adapted<H: Hashable>(hashable: H) -> ReusableViewViewModelAdapter {
-        .init(hashable: hashable, reusableViewViewModel: self)
+    func adapted<H: Hashable>(hashable: H) -> ReusableViewModelAdapter {
+        .init(hashable: hashable, reusableViewModel: self)
     }
 }
