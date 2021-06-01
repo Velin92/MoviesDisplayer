@@ -10,4 +10,10 @@ import Foundation
 
 final class MoviesSearchViewModel: ObservableObject {
     @Published var searchInput = ""
+    
+    let searchClient: MoviesSearchAPIClient
+    
+    init(searchClient: MoviesSearchAPIClient) {
+        self.searchClient = searchClient
+    }
 }

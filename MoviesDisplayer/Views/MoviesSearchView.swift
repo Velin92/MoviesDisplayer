@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MoviesSearchView: View {
-    @ObservedObject var viewModel = MoviesSearchViewModel()
+    @ObservedObject var viewModel: MoviesSearchViewModel
     
     var body: some View {
         VStack {
@@ -21,7 +21,9 @@ struct MoviesSearchView: View {
 }
 
 struct MoviesSearchView_Previews: PreviewProvider {
+    static let viewModel = MoviesSearchViewModel(searchClient: APIClient())
+    
     static var previews: some View {
-        MoviesSearchView()
+        MoviesSearchView(viewModel: viewModel)
     }
 }
